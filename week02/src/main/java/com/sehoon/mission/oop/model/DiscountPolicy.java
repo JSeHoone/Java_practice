@@ -1,4 +1,6 @@
 package com.sehoon.mission.oop.model;
 
-public class DiscountPolicy {
+public interface DiscountPolicy {
+
+    int calculateDiscount(Order order);
 }
