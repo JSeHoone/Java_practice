@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence" version="2.2">
+
+    <persistence-unit name="jpa-config">
+        <class>com.sehoon.todos.model.Todo</class>
+        <class>com.sehoon.todos.model.User</class>
+        <properties>
+            <property name="jakarta.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+            <property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/test"/>
+            <property name="jakarta.persistence.jdbc.user" value="root"/>
+            <property name="jakarta.persistence.jdbc.password" value="gorilla"/>
+
+            <property name="hibernate.show_sql" value="true"/>  <!--자동 생성되는 쿼리 보여줄 거야 ?-->
+            <property name="hibernate.format_sql" value="true"/> <!--우리가 보기 편하도록 이쁘게 해줄 거임 ?-->
+            <property name="hibernate.hdm2ddl" value="none"/>
+
+            <property name="jakarta.persistence.schema-generation.database.action" value="update"/>  <!-- 테이블 자동 생성 -->
+        </properties>
+    </persistence-unit>
+</persistence>

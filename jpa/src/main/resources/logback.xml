@@ -1,0 +1,4 @@
+<configuration>
+    <logger name = "org.hibernate" lebel = "OFF"/>
+    <root level ="OFF"/>
+</configuration>
