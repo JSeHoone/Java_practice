@@ -38,6 +38,8 @@ public class Application {
                 System.out.println(todo);
             }
 
+            tx.commit();
+
 
         } catch (Exception e) {
             tx.rollback();
