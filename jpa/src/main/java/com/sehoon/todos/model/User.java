@@ -28,7 +28,6 @@ public class User {
 
     // 관계 설정
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
-    @JoinColumn(name = "todo_id")
     private List<Todo> todos = new ArrayList<>();
 
     // 생성자
