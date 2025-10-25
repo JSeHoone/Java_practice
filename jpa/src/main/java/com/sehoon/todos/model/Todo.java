@@ -9,6 +9,7 @@ import java.time.LocalDate;
 public class Todo {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "todo_id")
     private long id;
 
@@ -18,12 +19,13 @@ public class Todo {
 
     // 작성자
     @ManyToOne
+    @JoinColumn(name = "user_id")
     private User user;
 
     // 작성일 -> 연월일로만 할건지 / 시간 포함할건지
     // 나는 [ 연/월/일 ] 로만
     @Column(name = "create_at")
-    private LocalDate createdAt;
+    private LocalDate createdAt = LocalDate.now();
 
     // 상태
     @Column(name = "status")
